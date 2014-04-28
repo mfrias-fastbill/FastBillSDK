@@ -1,7 +1,7 @@
 FastBill SDK
 ===========
 
-FastBill SDK for integrating API communication to php applications
+FastBill SDK for integrating API communication to php applications - http://www.fastbill.com
 <br><b>Requires</b> the cURL PHP and the JSON PHP extensions.
 
 <h4>API DOCUMENTATION SOURCES</h4>
@@ -47,7 +47,7 @@ Create an instance of the _Fastbill_ class with the configuration array as a par
 $fb = new Fastbill($config);
 ```
 
-<h3>Perform requests<h3>
+<h3>Perform requests</h3>
 
 Make your API calls directly from the instance and process the response as an array of values
 <br>_See the API Documentation for the response structure_
@@ -64,7 +64,7 @@ echo '</pre>';
 Implement your personalized calls in the <b>fastbill.php</b> class to create the requests you need for your application.
 <br>See the corresponding API documentation for the request structure.
 
-<br>Example: The following XML request is used for getting the invoice with the number 25
+<br><b>Example:</b> The following XML request is used for getting the invoice with the number 25
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,4 +90,18 @@ function getInvoiceByNumber($invoiceNumber){
         return $this->FB_APIRequest($data);        
     }
 ```
+Don't forget to check the <b>My_FB_App_Sample.php</b> to see how this works
+
+
+<h3>Additional info</h3>
+
+<b>API DOCUMENTATION SOURCES</b>
+<br>_FastBill_ - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
+<br>_FastBill Automatic_ - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
+<br>
+<br>
+Contact:
+<br>mfrias@fastbill.com
+<br><b>Mauricio Frias</b>
+
 
