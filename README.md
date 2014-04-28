@@ -1,7 +1,12 @@
-fastbillSDK
+FastBill SDK
 ===========
 
 FastBill SDK for integrating API communication to php applications
+<br><b>Requires</b> the cURL PHP and the JSON PHP extensions.
+
+<h4>API DOCUMENTATION SOURCES</h4>
+_FastBill_ - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
+<br>_FastBill Automatic_ - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 
 
 Usage
@@ -36,7 +41,7 @@ _NOTE:_ The account type corresponds to the FastBill product where the account i
 
 <h3>Initialization</h3>
 
-Create an instance of the Fastbill class with the configuration array as a parameter
+Create an instance of the _Fastbill_ class with the configuration array as a parameter
 
 ```
 $fb = new Fastbill($config);
@@ -44,10 +49,45 @@ $fb = new Fastbill($config);
 
 <h3>Perform requests<h3>
 
-Make your API calls directly from the instance by implementing personalized calls in th Fastbill.php class
+Make your API calls directly from the instance and process the response as an array of values
+<br>_See the API Documentation for the response structure_
 
 ```
 $response = $fb->getCustomers();
+
+echo '<pre>';
+print_r($response['RESPONSE']['CUSTOMERS']);
+echo '</pre>';
+
 ```
 
+Implement your personalized calls in the <b>fastbill.php</b> class to create the requests you need for your application.
+<br>See the corresponding API documentation for the request structure.
+
+<br>Example: The following XML request is used for getting the invoice with the number 25
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<FBAPI>
+   <SERVICE>invoice.get</SERVICE>
+   <FILTER>
+       <INVOICE_NUMBER>25</INVOICE_NUMBER>
+   </FILTER>
+</FBAPI>
+```
+Create a function in the <b>fastbill.php</b> class and start from the <b>SERVICE</b> tag and work your way through the XML body to create an array with the <b>tags</b> as <b>keys</b> and setting their corresponding values
+
+```
+# (Example) Return the invoice with the given invoice number
+
+function getInvoiceByNumber($invoiceNumber){
+
+        $data = array('SERVICE' => 'invoice.get',
+                      'FILTER' => array(
+                          'INVOICE_NUMBER' => $invoiceNumber
+                      ));
+                      
+        return $this->FB_APIRequest($data);        
+    }
+```
 
