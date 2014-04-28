@@ -147,7 +147,7 @@ abstract class BaseFastBill {
     /**
      * Version of the FastBill SDK
      */
-    const VERSION = '1.0';   
+    const VERSION = '0.9';   
 
     /**
      * Predefined CURL options used for the requests
