@@ -1,16 +1,17 @@
-FastBill SDK
-===========
+<a href="www.fastbill.com"><img src="http://www.trendlupe.de/uploads/Bilder/diverse/FastBill_Logo_250x80.png"/></a>
+==========================
 
-FastBill SDK for integrating API communication to php applications - http://www.fastbill.com
+<h3>FastBill SDK </h3>PHP library for integrating FastBill API communication to your applications - http://www.fastbill.com
 <br><b>Requires</b> the cURL PHP and the JSON PHP extensions.
+<br>
+<br>
+<b>API DOCUMENTATION SOURCES</b>
+<br>FastBill - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
+<br>FastBill Automatic - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
+<br>
 
-<h4>API DOCUMENTATION SOURCES</h4>
-_FastBill_ - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
-<br>_FastBill Automatic_ - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 
-
-Usage
-=====
+<h2>Usage</h2>
 
 <h3>Reference</h3>
 
