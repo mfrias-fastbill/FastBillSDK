@@ -16,7 +16,7 @@
  * under the License.
  *
  * @category   FastBill SDK
- * @version    1.0
+ * @version    0.9
  * @author     Mauricio Frias <mfrias@fastbill.com>
  * @copyright  2014 FastBill GmbH
  */
@@ -53,17 +53,27 @@ class Fastbill extends BaseFastBill {
         return $this->FB_APIRequest($data);        
     }
     
+    function createRevenue($customerId, $subTotal, $file){
+        $data = array('SERVICE' => 'revenue.create',
+                      'DATA' => array(
+                          'CUSTOMER_ID' => $customerId,
+                          'SUB_TOTAL' => $subTotal,
+                          'INVOICE_DATE' => '2014-04-28'
+                      ));
+        return $this->FB_APIRequest($data,$file);        
+    }
     
-    
+        
      /**
      * Makes a CURL request to the FastBill API with the data
      * 
      * @param array $data structure of the request to the FastBill API 
-     * (see API Documentation http://www.fastbill.com/api/)          
+     * (see API Documentation http://www.fastbill.com/api/)     
+      *@param $file (optional) File path of the document to attach for the upload     
      * @return string JSON encoded string with the result from the server.
      */
-    function FB_APIRequest($data) {
-        return $this->request($data);
+    function FB_APIRequest($data , $file=null) {
+        return $this->request($data , $file);
     }
 
 }
