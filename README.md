@@ -5,7 +5,7 @@
 <br><b>Requires</b> the cURL PHP and the JSON PHP extensions.
 <br>
 <br>
-<b>API DOCUMENTATION SOURCES</b>
+<a name="docu_links"><b>API DOCUMENTATION SOURCES</b></a>
 <br>FastBill - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
 <br>FastBill Automatic - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 <br>
@@ -51,7 +51,7 @@ $fb = new Fastbill($config);
 <h3>Perform requests</h3>
 
 Make your API calls directly from the instance and process the response as an array of values
-<br>_See the API Documentation for the response structure_
+<a href="#docu_links"><br>_See the API Documentation for the response structure_</a>
 
 ```
 $response = $fb->getCustomers();
