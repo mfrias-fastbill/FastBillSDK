@@ -76,7 +76,7 @@ Implement your personalized calls in the <b>fastbill.php</b> class to create the
    </FILTER>
 </FBAPI>
 ```
-Create a function in the <b>fastbill.php</b> class and start from the <b>SERVICE</b> tag and work your way through the XML body to create an array with the <b>tags</b> as <b>keys</b> and setting their corresponding values
+Create a function in the <b>fastbill.php</b> class and start from the <b>SERVICE</b> tag and work your way through the XML body to create an array with the <b>tags</b> as <b>keys</b> and setting their corresponding values. Send all this data as a parameter to the ```FB_APIResquest($data)``` function.
 
 ```
 # (Example) Return the invoice with the given invoice number
@@ -91,6 +91,24 @@ function getInvoiceByNumber($invoiceNumber){
         return $this->FB_APIRequest($data);        
     }
 ```
+
+<h4>Uploading files</h4>
+Some FastBill API services allow you to upload files to your account (i.e: revenue.create). All you need for this, is to provide the <b>file path</b> of the document to upload as a parameter in the ```FB_APIResquest($data , $file)``` function 
+
+```
+# (Example) Create a new revenue entry and attach a document
+
+function createRevenue($customerId, $subTotal, $file){
+        $data = array('SERVICE' => 'revenue.create',
+                      'DATA' => array(
+                          'CUSTOMER_ID' => $customerId,
+                          'SUB_TOTAL' => $subTotal,
+                          'INVOICE_DATE' => '2014-04-28'
+                      ));
+        return $this->FB_APIRequest($data,$file);        
+    }
+```
+
 Don't forget to check the <b>My_FB_App_Sample.php</b> to see how this works
 
 
