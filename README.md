@@ -92,6 +92,32 @@ function getInvoiceByNumber($invoiceNumber){
     }
 ```
 
+<br><b>Example:</b> A function that creates an invoice with items
+
+```
+function createInvoice( $customerId , $date ){
+         $data = array('SERVICE' => 'invoice.create',
+                      'DATA' => array(
+                          'CUSTOMER_ID' => $customerId,
+                          'INVOICE_DATE' => $date,
+                          'ITEMS' => array(
+                              0 => array(
+                                  'ARTICLE_NUMBER' => 1,
+                                  'UNIT_PRICE' => 15
+                              ),
+                              1 => array(
+                                  'ARTICLE_NUMBER' => 2,
+                                  'UNIT_PRICE' => 20
+                              )
+                          )
+                      ));   
+         return $this->FB_APIRequest($data);
+    }
+
+```
+<b>Note:</b> the ```<ITEM>``` tag from the documentation has been replaced with numerical indexes ```0 , 1 ``` in the code.
+
+
 <h4>Uploading files</h4>
 Some FastBill API services allow you to upload files to your account (i.e: revenue.create). All you need for this, is to provide the <b>file path</b> of the document to upload as a parameter in the ```FB_APIResquest($data , $file)``` function 
 
