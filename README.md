@@ -6,7 +6,7 @@
 <br>
 <br>
 <b>API DOCUMENTATION SOURCES</b>
-<br>FastBill - http://www.fastbill.com/docs/api
+<br>FastBill - http://www.fastbill.com/api
 <br>FastBill Automatic - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 <br>
 
