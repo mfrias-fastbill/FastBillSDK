@@ -1,4 +1,4 @@
-<a href="www.fastbill.com"><img src="http://www.trendlupe.de/uploads/Bilder/diverse/FastBill_Logo_250x80.png"/></a>
+<a href="www.fastbill.com"><img src="http://p1.zdassets.com/hc/settings_assets/24003/200023827/xYwdOGx7EalbzFRykLsAgg-logo1900x500_ohnestreifen.png"/></a>
 ==========================
 
 <h3>FastBill SDK </h3>PHP library for integrating FastBill API communication to your applications - http://www.fastbill.com
@@ -6,7 +6,7 @@
 <br>
 <br>
 <b>API DOCUMENTATION SOURCES</b>
-<br>FastBill - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
+<br>FastBill - http://www.fastbill.com/docs/api
 <br>FastBill Automatic - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 <br>
 
@@ -141,7 +141,7 @@ Don't forget to check the <b>My_FB_App_Sample.php</b> to see how this works
 <h3>Additional info</h3>
 
 <b>API DOCUMENTATION SOURCES</b>
-<br>_FastBill_ - http://www.fastbill.com/docs/FastBill_API-Doku_V1-6.pdf?v=1
+<br>_FastBill_ - http://www.fastbill.com/api
 <br>_FastBill Automatic_ - https://automatic.fastbill.com/docs/API-Doku_FBA_V1-11.pdf
 <br>
 <br>
