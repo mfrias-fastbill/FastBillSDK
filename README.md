@@ -1,4 +1,4 @@
-<a href="www.fastbill.com"><img src="https://team.fastbill.com/public.php?service=files&t=fad4c61b69f575c771656755eaa71b32&path=%2FHochauflösende%20PNG"/></a>
+<a href="www.fastbill.com"><img src="http://www.fastbill.com/firma-de/img/fb_logo.svg"/></a>
 ==========================
 
 <h3>FastBill SDK </h3>PHP library for integrating FastBill API communication to your applications - http://www.fastbill.com
